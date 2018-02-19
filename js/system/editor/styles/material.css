@@ -1,0 +1,21 @@
+.note-editor .note-toolbar .btn{
+	padding: 5px 15px;
+	color: black;
+}
+
+.note-popover .popover .popover-content{
+	padding: 4px 0 0 5px;
+}
+
+.note-shortcut-row .note-shortcut-name{
+	color: white;
+}
+
+.note-editor .note-image-popover{
+	top: 0;
+	background: none;
+}
+
+.note-editor .note-image-popover .btn{
+	background-color: #eee;
+}

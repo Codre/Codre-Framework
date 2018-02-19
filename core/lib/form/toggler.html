@@ -1,0 +1,5 @@
+<div>
+	{$formParams.label}:
+	<label><input type="radio" name="{$formParams.name}" {if $formParams.value == 1} checked="checked"{/if} id="radio_{$formParams.name}_1" {$formParams.attr} value="1"> Да</label> 
+	<label><input type="radio" name="{$formParams.name}" {if !$formParams.value} checked="checked"{/if} id="radio_{$formParams.name}_0" {$formParams.attr} value="0"> Нет</label> 
+</div>

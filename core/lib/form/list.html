@@ -1,0 +1,24 @@
+<div>
+	{$formParams.label}: 
+	{if $formParams.listType == 'checkbox'}
+		{foreach $formParams.listItems as $k=>$v}
+			<br /><label><input type="checkbox" {if $k == $formParams.value} checked="checked"{/if} {$formParams.attr} value="{$k}" name="{$formParams.name}[]" id="checkbox_{$formParams.name}_{$k}" /> {$v}</label>
+		{/foreach}
+	{elseif $formParams.listType == 'radiobox'}
+		{if !$formParams.required}
+			<br /><label><input type="radio" {$formParams.attr} value="0" name="{$formParams.name}" id="radio_{$formParams.name}_0" /> {$formParams.placeholder}</label>
+		{/if}
+		{foreach $formParams.listItems as $k=>$v}
+			<br /><label><input type="radio" {if $k == $formParams.value} checked="checked"{/if} {$formParams.attr} value="{$k}" name="{$formParams.name}" id="radio_{$formParams.name}_{$k}" /> {$v}</label>
+		{/foreach}
+	{else}
+		<select {if $formParams.multiple} multiple {/if}{$formParams.attr} name="{$formParams.name}{if $formParams.multiple}[]{/if}" id="sel_{$formParams.name}">
+			{if !$formParams.required}
+				<option value="0">{$formParams.placeholder}</option>
+			{/if}
+			{foreach $formParams.listItems as $k=>$v}
+				<option value="{$k}" {if $k == $formParams.value} selected="selected"{/if} >{$v}</option>
+			{/foreach}
+		</select>
+	{/if}
+</div>
