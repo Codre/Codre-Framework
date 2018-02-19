@@ -1,11 +1,5 @@
 <?php
-
-
-
 defined('INDEX') or die('acsess error');
-
-
-
 /**
 
 
